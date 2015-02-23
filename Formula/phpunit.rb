@@ -3,9 +3,13 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Phpunit < Formula
-  homepage 'http://phpunit.de/manual/current/en/'
-  url 'https://phar.phpunit.de/phpunit-4.3.4.phar'
-  sha1 'ba7d273f700753f1706a16d638bc7943a1491582'
+  homepage "http://phpunit.de/manual/current/en/"
+  url "https://phar.phpunit.de/phpunit-4.5.0.phar"
+  sha1 "314423c2dfd2f09bebf04886bc1e34e12c80d409"
+
+  head "https://github.com/sebastianbergmann/phpunit.git"
+
+  devel "https://github.com/sebastianbergmann/phpunit.git", :branch => "4.6"
 
   def install
     libexec.install "phpunit-#{version}.phar"
